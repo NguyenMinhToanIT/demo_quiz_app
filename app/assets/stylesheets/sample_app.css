@@ -1,0 +1,57 @@
+#navbar-personal {
+    width: 100%;
+}
+
+#navbar-personal img {
+    width: 80px;
+}
+
+#main {
+    overflow: hidden;
+    min-height: 773px;
+}
+
+#main h1,
+.btn {
+    text-align: center;
+    width: 100%;
+}
+
+.main_title {
+    margin: 0 auto;
+}
+
+.debug_dump {
+    border: 1px solid #b3abab;
+    width: 100%;
+    padding: 0.5em;
+    background-color: #eaeaea;
+}
+
+label,
+input {
+    width: 100%;
+}
+
+#session_remember_me {
+    width: unset;
+}
+
+.edit_btn_back {
+    width: 25%;
+    margin-top: 2em;
+}
+
+.pagination li {
+    border: 1px solid blue;
+    padding: 5px 10px;
+    margin-right: 2px;
+}
+
+.pagination li.active {
+    background-color: #316ede;
+}
+
+.pagination li.active a {
+    color: white;
+}
