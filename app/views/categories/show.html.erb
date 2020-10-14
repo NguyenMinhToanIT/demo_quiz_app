@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<div class=" w-100 title-category">
+  <strong>Title:</strong>
+  <%= @category.title %>
+</div>
+<div class=" w-100 show-question">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Question</th>
+      <th>option 1</th>
+      <th>option 2</th>
+      <th>option 3</th>
+      <th>option 4</th>
+      <th>answer</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @category.questions.each do |question|%>
+    <tr>
+      <td scope="row"><%= question.question_no%></td>
+      <td><%= question.question %></td>
+      <td><%= question.opt1 %></td>
+      <td><%= question.opt2 %></td>
+      <td><%= question.opt3 %></td>
+      <td><%= question.opt4 %></td>
+      <td><%= question.answer %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
+<div class=" add-question">
+  <h2>Add question</h2>
+<%= form_with(model: [ @category, @category.questions.build ], local: true) do |f|%>
+  <div class="form-group">
+    <%= f.label :question_no, "Question number" %>
+    <%= f.text_field :question_no %>
+  </div>
+  <div class="form-group">
+    <%= f.label :question, "Question number" %>
+    <%= f.text_field :question %>
+  </div>
+  <div class="form-group">
+    <%= f.label :opt1, "option 1" %>
+    <%= f.text_field :opt1 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :opt2, "option 2" %>
+    <%= f.text_field :opt2 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :opt3, "option 3" %>
+    <%= f.text_field :opt3 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :opt4, "option 4" %>
+    <%= f.text_field :opt4 %>
+  </div>
+    <div class="form-group">
+    <%= f.label :answer, "Answer" %>
+    <%= f.text_field :answer %>
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Save'%>
+  </div>
+
+<% end %>
+
+</div>
+<div class=" w-100 btn-category">
+  <%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Back', categories_path %>
+</div>
+

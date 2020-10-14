@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :categories do
+    resources :questions
+  end
+  resources :questions
   get 'password_resets/new'
   get 'password_resets/edit'
   #get 'sessions/new'

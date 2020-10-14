@@ -31,24 +31,12 @@
           <strong>17 đề luyện thi B2 chuẩn - Bộ GTVT</strong>
         </div>
         <div class="">
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de01">Đề 01</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de02">Đề 02</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de03">Đề 03</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de04">Đề 04</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de05">Đề 05</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de06">Đề 06</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de07">Đề 07</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de08">Đề 08</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de09">Đề 09</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de10">Đề 10</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de11">Đề 11</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de12">Đề 12</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de13">Đề 13</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de14">Đề 14</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de15">Đề 15</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de16">Đề 16</button>
-          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de17">Đề 17</button>
-        </div>
+          <% @categories.each do |category| %>
+            <%= link_to(category) do %>
+              <strong class="btn btn-success btn-thongtin"><%= category.title %></strong>
+            <% end %>
+          <% end %>
+
         <div class="text-primary">
           <strong>Luyện 60 câu hỏi các tình huống giao thông nghiêm trọng:</strong>
         </div>

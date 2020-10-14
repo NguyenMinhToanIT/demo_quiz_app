@@ -64,3 +64,7 @@ input {
 .btn-thongtin {
     margin: 3px;
 }
+
+.w-100 {
+    width: 100%;
+}
