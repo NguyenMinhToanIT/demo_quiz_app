@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light bg-light" id="navbar-personal">
   <img src="/assets/logo-removebg-preview.png" alt="">
-  <%= link_to 'Blog linh tinh', root_path, class: 'navbar-brand' %>
+  <%= link_to 'Lái xe an toàn', root_path, class: 'navbar-brand' %>
   <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
       aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,6 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%if logged_in?%>
-            <%= link_to 'Users', users_path, class:'dropdown-item' %>
             <%= link_to 'Logout', logout_path, method: :delete, class:'dropdown-item' %>
             <%= link_to 'Profile', current_user, class:'dropdown-item'  %>
             <%= link_to 'Settings', edit_user_path(current_user), class:'dropdown-item'  %>

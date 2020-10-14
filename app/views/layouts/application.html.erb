@@ -15,22 +15,50 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row">
-        <%= render 'layouts/nav'%>
-      </div>
-      <div class="row">
-        <% flash.each do |message_type, message|%>
-          <%= content_tag(:div, message, class: "alert alert-#{message_type}")%>
-        <% end %>
-      </div>
-      <div class="row" id="main">
-        <%= yield %>  
-      </div>
-      <div class="row">
-        <%= render 'layouts/footer'%>
-      </div>
-    </div>
+    
+      <% if logged_in? && current_user.admin?%>
+        <div class="d-flex" id="wrapper">
+          <!-- Sidebar -->
+          <%= render 'layouts/sidebar'%>
+          <!-- /#sidebar-wrapper -->
+          <!-- Page Content -->
+          <div id="page-content-wrapper">
+          <!-- nav -->
+            <%= render 'layouts/nav_admin'%>
+          <!-- /#nav-wrapper -->
+          <!-- container -->
+            <div class="container-fluid">
+            <% flash.each do |message_type, message|%>
+                <%= content_tag(:div, message, class: "alert alert-#{message_type}")%>
+              <% end %>
+              <div class="row" id="main">
+                <%= yield %>  
+              </div>
+              
+            </div>
+          <!-- /#container -->
+
+          </div>
+        <!-- /#page-content-wrapper -->
+        </div>
+      <%else%>
+        <div class="container">
+            <div class="row">
+              <%= render 'layouts/nav'%>
+            </div>
+            <div class="row">
+              <% flash.each do |message_type, message|%>
+                <%= content_tag(:div, message, class: "alert alert-#{message_type}")%>
+              <% end %>
+            </div>
+            <div class="row" id="main">
+              <%= yield %>  
+            </div>
+            <div class="row">
+              <%= render 'layouts/footer'%>
+            </div>
+        </div>
+      <% end %>
     
   </body>
 </html>

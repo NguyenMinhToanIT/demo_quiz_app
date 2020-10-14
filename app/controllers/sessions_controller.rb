@@ -4,21 +4,25 @@ class SessionsController < ApplicationController
       render 'new'
     else
       user =  User.find_by id: session[:user_id]
-      redirect_to user
+      #if current_user.admin?
+       # redirect_to 
+      #else  
+        redirect_to user
+      #end
+
     end
   end
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
-      # log_in user
-      # remember user
-      # params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      # flash[:success] = "Login success"
-      # redirect_back_or user
       if user.activated?
         log_in user
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-        redirect_back_or user
+        #if current_user.admin?
+        #   redirect_to admin
+        # else  
+          redirect_back_or user
+        # end
       else
         message = "Account not activated"
         message += "Check your email for the activation link"

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update, :show, :index]
+  before_action :logged_in_user, only: [:edit, :update, :show]
   before_action :correct_user, only:[:edit, :update, :show]
-  before_action :admin_user, only: :destroy
+  before_action :admin_user, only: [:destroy,:index]
   def index
     @users = User.paginate(page: params[:page],per_page:5)
   end

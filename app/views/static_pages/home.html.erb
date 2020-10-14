@@ -1,17 +1,76 @@
 <% provide(:title, "Home Blog")%>
-<div class="main_title">
-  <img src="/assets/lion-removebg-preview.png" alt="">
-  <h1>Sample App | Home Blog</h1>
-  <p>
-    This is the home page for the 
-    <a href="https://www.railstutorial.org/">Ruby on rails Tutorials</a>
-    sample application.
-  </p>
-  <% if logged_in? %>
-    <%= link_to 'Your profile', current_user, class: 'btn btn-primary' %>
-  <% else %>
-    <%= link_to 'Sign up now!', signup_path, class: 'btn btn-primary' %>
-  <% end %>
+<div class="col-md-4 col-sm-12 col-xs-12">
+  <div class="row p-2">
+    <p style="text-align:center"><img src="/assets/thi-bang-lai-xe-b2-online.jpg" class="img-fluid" alt="thi bằng lái xe B2 online"/></p>
+  </div>
+  <div class="row p-2">
+    <div class="col border border-primary rounded-lg p-2">
+      <p><strong class="text-success">LUYỆN THI LÝ THUYẾT GPLX B2 600 CÂU</strong></p>
+      <p>Đề thi được soạn bộ 600 câu hỏi ôn thi giấy phép lái xe ô tô của Bộ GTVT áp dụng từ <b style="color:red">01/08/2020.</b></p>
+      <p>Ứng dụng được thiết kế tương thích với mọi loại thiết bị (máy tính để bàn, laptop, máy tính bảng, điện thoại) nhằm giúp học viên dễ dàng sử dụng.</p>
+      <p>Chỉ cần có mạng, không phải tải về, không phải cài đặt.</p>
+    </div>
+  </div>
 </div>
-
-
+<div class="col-md-8 col-sm-12 col-xs-12">
+  <div class="row p-2">
+    <div class="col border border-primary rounded-lg p-2">
+      <div class="shadow-sm p-3 bg-light text-center">
+        <h3 class="text-info"><b>TUYỂN SINH KHÓA HỌC LÁI XE Ô TÔ HẠNG B2</b></h3>
+        <h5 class="text-danger"><b>Tháng thi: 05/2021</b></h5>
+        <h5 class="text-primary"><b>Phone/Zalo: <a href="tel:0868600300">0868 600 300</a> - <a href="tel:0933427999">0933 427 999</a></b></h5>
+        <h6><b>Văn phòng: 1172i Đường 3 Tháng 2, Phường 12, Quận 11, Tp.HCM</b></h6>
+        <div class="text-center">
+          <a class="btn btn-primary mt-btn font-weight-bold" href="http://hoclaixeoto.vn/hoc-lai-xe-oto-b2" role="button">Học lái xe ô tô b2</a>
+        </div>
+      </div>
+      <br>
+      <div class="shadow-sm text-center p-3 bg-light">
+        <h4><strong class="text-success">BỘ ĐỀ LUYỆN THI BẰNG LÁI XE B2 2020 - LUẬT 600 CÂU</strong></h4>
+        <div class="text-primary">
+          <strong>17 đề luyện thi B2 chuẩn - Bộ GTVT</strong>
+        </div>
+        <div class="">
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de01">Đề 01</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de02">Đề 02</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de03">Đề 03</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de04">Đề 04</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de05">Đề 05</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de06">Đề 06</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de07">Đề 07</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de08">Đề 08</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de09">Đề 09</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de10">Đề 10</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de11">Đề 11</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de12">Đề 12</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de13">Đề 13</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de14">Đề 14</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de15">Đề 15</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de16">Đề 16</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de17">Đề 17</button>
+        </div>
+        <div class="text-primary">
+          <strong>Luyện 60 câu hỏi các tình huống giao thông nghiêm trọng:</strong>
+        </div>
+        <div class="">
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de19">Câu liệt - Phần 01</button>
+          <button type="submit" class="btn btn-success btn-thongtin" name="chondethi" value="de20">Câu liệt - Phần 02</button>
+        </div>
+      </div>
+      <br>
+      <div class="">
+        <div>
+          <p><strong class="text-primary">Cấu trúc bộ đề thi mới:</strong></p>
+          <ul>
+            <li>Thời gian làm bài: 22 phút.</li>
+            <li>Số câu hỏi trong mỗi đề: 35 câu.</li>
+            <li>Mỗi câu có từ 02 đến 04 ý trả lời, trong đó chỉ có 01 ý trả lời đúng nhất.</li>
+            <li>Trong số các câu hỏi, có 01 câu trả lời sai (câu hỏi điểm liệt) sẽ bị truất quyền sát hạch.</li>
+            <li>Các câu còn lại, mỗi câu tính 01 điểm.</li>
+            <li>Kết thúc bài thi, thí sinh đạt 32/35 điểm trở lên và không sai câu hỏi điểm liệt là đạt.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

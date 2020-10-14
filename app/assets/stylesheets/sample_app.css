@@ -55,3 +55,12 @@ input {
 .pagination li.active a {
     color: white;
 }
+
+#menu-toggle,
+.btn-thongtin {
+    width: inherit;
+}
+
+.btn-thongtin {
+    margin: 3px;
+}
